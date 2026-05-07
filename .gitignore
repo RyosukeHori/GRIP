@@ -139,6 +139,7 @@ log/
 
 *.png
 *.jpg
+!image/teaser.png
 stageroom_train/ # tensorboard log
 trials/
 output_videos/
