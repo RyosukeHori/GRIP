@@ -1,0 +1,104 @@
+# if given, will override the device setting in gym. 
+task: HumanoidImGrip
+
+notes:  ""
+motion_file: ""
+num_envs: 3072
+max_len: 300
+
+
+### GRIP Config
+rand_seq: False
+subjects: []
+failed_keys: ""
+num_imus: 4
+latent_dim: 512
+win_len: 50
+load:
+  imu: True
+  insole: True
+  slam: False
+  pose_p: True
+  joint_p_l: False
+  joint_p_g: True
+  angv_gp: False
+  jvel_gp: False
+  rvel_gp: False
+  trans_gp: False
+  imu_vel: True
+  imu_angv: True
+  joint_gt_g: False
+  object: True
+fall_penalty: 5.0
+fall_recovery: False  # test-time only
+###
+
+
+env_spacing: 5
+episode_length: 500
+is_flag_run: False
+enable_debug_vis: False
+
+fut_tracks: False
+self_obs_v: 1
+obs_v: 6
+auto_pmcp: False
+auto_pmcp_soft: True
+
+
+has_pnn: True
+fitting: False
+num_prim: 3
+training_prim: 0
+actors_to_load: 3
+has_lateral: False
+models: []
+
+######## Getup Configs ########
+zero_out_far: False
+zero_out_far_train: False
+getup_udpate_epoch: 78750
+cycle_motion: False
+hard_negative: False
+min_length: 5
+
+# getup_schedule: True
+# recoverySteps: 90
+# zero_out_far_steps: 90
+# recoveryEpisodeProb: 0.5
+# fallInitProb: 0.3
+
+
+kp_scale: 1
+power_reward: True
+
+shape_resampling_interval: 500
+
+control_mode: "isaac_pd"
+power_scale: 1.0
+controlFrequencyInv: 1
+stateInit: "Random"  
+hybridInitProb: 0.5
+numAMPObsSteps: 10
+
+local_root_obs: True
+root_height_obs: True
+key_bodies: ["R_Ankle", "L_Ankle", "R_Wrist",  "L_Wrist"]
+contact_bodies: ["R_Ankle", "L_Ankle", "R_Toe", "L_Toe", 'Pelvis']
+reset_bodies: ['Pelvis', 'L_Hip', 'L_Knee', 'R_Hip', 'R_Knee', 'Torso', 'Spine', 'Chest', 'Neck', 'Head', 'L_Thorax', 'L_Shoulder', 'L_Elbow', 'L_Wrist', 'L_Hand', 'R_Thorax', 'R_Shoulder', 'R_Elbow', 'R_Wrist', 'R_Hand']
+trackBodies: []
+terminationHeight: 0.15
+enableEarlyTermination: True
+VerticalDistanceTermination: False 
+terminationDistance: 0.25
+
+### Fut config
+numTrajSamples: 3
+trajSampleTimestepInv: 3
+enableTaskObs: True
+
+
+plane:
+  staticFriction: 1.0
+  dynamicFriction: 1.0
+  restitution: 0.0

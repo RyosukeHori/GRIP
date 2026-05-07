@@ -1,0 +1,55 @@
+# Install order:
+#   1. Conda env with Python 3.8 + PyTorch + CUDA (see README)
+#   2. Isaac Gym Preview 4 (manual download, then `pip install -e .` inside isaacgym/python)
+#   3. pip install -r requirements.txt   (this file)
+
+# === Scientific core ===
+# numpy is pinned to the pip-wheel build (OpenBLAS) to match the reference
+# `isaac` env. The conda-forge numpy 1.22.x links against netlib BLAS, which
+# changes float ordering enough to break motion_lib's frame-count overflow
+# checks (Max frames: 2147483647) and inflate fall counts.
+numpy==1.24.4
+scipy==1.10.1
+matplotlib
+pandas
+openpyxl
+tqdm
+joblib
+pyyaml
+easydict
+imageio
+imageio-ffmpeg
+opencv-python
+scikit-image
+termcolor
+
+# === DynamicsNet: Hydra + RL backend ===
+hydra-core
+omegaconf
+gym
+rl-games==1.1.4
+wandb
+tensorboardX
+aiohttp
+
+# === SMPL body model ===
+# Note: the two custom forks `smplx` and `smpl_sim` are installed by
+# `scripts/setup_grip.sh` BEFORE this file, because pip's resolver gets stuck
+# on their transitive constraints (hydra-core / gymnasium) otherwise.
+chumpy
+mujoco
+lxml
+
+# === Data preprocessing (IMU / VQF / signal) ===
+imufusion
+vqf
+
+# === KinematicsNet articulate utilities ===
+thop
+numpy-quaternion
+
+# === Visualization ===
+aitviewer
+trimesh
+open3d
+pyvirtualdisplay

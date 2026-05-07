@@ -1,0 +1,18 @@
+# Minimal conda environment for GRIP.
+# Creates an env named `grip` with Python 3.8.
+# PyTorch (with CUDA 12.1) is installed by `scripts/setup_grip.sh` via pip
+# rather than conda — the pytorch / nvidia conda channels currently ship a
+# build that breaks with `iJIT_NotifyEvent` on driver 590+, while the
+# upstream pip wheel pinned to cu121 works cleanly.
+#
+# After `conda env create -f environment.yml --solver=libmamba`, activate the
+# env and follow the rest of the install steps in README.md (Isaac Gym +
+# `bash scripts/setup_grip.sh`).
+
+name: grip
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8
+  - pip
