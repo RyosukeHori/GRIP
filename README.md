@@ -63,7 +63,7 @@ Drop the zip into the project root and unpack it under `data/`:
 unzip prism_preprocessed.zip -d data/
 ```
 
-> The PRISM link above provides the **preprocessed tensors** needed to reproduce GRIP without re-running the data pipeline. If you want the **raw PRISM capture** (mocap, IMU, insole, video, …), grab it from the [PRISM repository](https://github.com/RyosukeHori/PRISM) and run `data_process/kinematics_dataset.py` + `data_process/dynamics_dataset.py` yourself.
+> The PRISM link above provides the **preprocessed tensors** needed to reproduce GRIP without re-running the data pipeline. If you want the **raw PRISM dataset** (mocap, IMU, insole, …), grab it from the [PRISM repository](https://github.com/RyosukeHori/PRISM) and run `data_process/kinematics_dataset.py` + `data_process/dynamics_dataset.py` yourself.
 
 ✅ **Verify the install:**
 
