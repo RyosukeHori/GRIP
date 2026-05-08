@@ -55,7 +55,7 @@ cd /path/to/GRIP && bash scripts/setup_grip.sh
 | Path | Contents | Source |
 |---|---|---|
 | `data/smpl/SMPL_{NEUTRAL,MALE,FEMALE}.pkl` | SMPL body model | [SMPL](https://smpl.is.tue.mpg.de/) |
-| `data/preprocessed/{kinematics_net,dynamics_net}/...` | Preprocessed train / test data (~4.5 GB zipped) | [download](https://drive.google.com/file/d/1n-61pzHDGHYAiZHFPbdV9vI70hs6fSaW/view?usp=sharing) |
+| `data/preprocessed/{kinematics_net,dynamics_net}/...` | Preprocessed train / test data (~4.5 GB zipped) | [download](https://docs.google.com/forms/d/e/1FAIpQLSeU9QCWYGtJDlHWlrej72ihuABk3OCHQL7sSEGXIvPnZN3nzA/viewform?usp=dialog) |
 
 Drop the zip into the project root and unpack it under `data/`:
 
