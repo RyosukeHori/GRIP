@@ -12,7 +12,6 @@ __pycache__/
 out/
 # C extensions
 *.so
-*.pkl
 
 # Distribution / packaging
 .Python
@@ -137,13 +136,8 @@ data/*
 output/
 log/
 
-*.png
-*.jpg
-!image/teaser.png
 stageroom_train/ # tensorboard log
 trials/
 output_videos/
-*.pkl
-*.pt
 new_trials
 gh-md-toc
