@@ -2,7 +2,6 @@
 AMASS_data/
 imgui.ini
 .DS_Store
-*.json
 openmpi-4.1.5/
 
 # Byte-compiled / optimized / DLL files
