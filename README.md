@@ -65,6 +65,19 @@ unzip prism_preprocessed.zip -d data/
 
 > The PRISM link above provides the **preprocessed tensors** needed to reproduce GRIP without re-running the data pipeline. If you want the **raw PRISM dataset** (mocap, IMU, insole, …), grab it from the [PRISM repository](https://github.com/RyosukeHori/PRISM) and run `data_process/kinematics_dataset.py` + `data_process/dynamics_dataset.py` yourself.
 
+🧠 **Pretrained models** (optional — skip training and run inference / evaluation directly):
+
+| Path | Contents | Source |
+|---|---|---|
+| `output/kinematics_net/models/best_model.pt` | Trained KinematicsNet weights | [download](https://drive.google.com/file/d/1ET9IL72OpSxGImTvXJvGfQQyH3kDh6RC/view?usp=sharing) |
+| `output/dynamics_net/Humanoid.pth` | Trained DynamicsNet policy | (same zip) |
+
+Drop the zip into the project root and unpack it — the archive already contains the `output/` layout:
+
+```bash
+unzip output.zip   # creates output/kinematics_net/models/best_model.pt and output/dynamics_net/Humanoid.pth
+```
+
 ✅ **Verify the install:**
 
 ```bash
